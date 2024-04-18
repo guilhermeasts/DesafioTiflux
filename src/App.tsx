@@ -1,24 +1,48 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+
+import logo from './assets/logo.svg'
+import login from './assets/log-in.svg'
+import sideimage from './assets/side-image.svg'
+import mail from './assets/mail.svg'
+import lock from './assets/lock.svg'
+import eye from './assets/eye.svg'
+
+import Image from './components/image/image';
+import Header from './components/header/header'
+import EmailInput from './components/emailInput/emailInput';
+import PasswordInput from './components/passwordInput/passwordInput';
+import Checkbox from './components/checkbox/checkbox';
+import Button from './components/button/button';
+import Register from './components/register/register';
+
+
+
+
+
+
+
+function LoginForm() {
+  return (
+    <div className='login'>
+      <div className='loginbox'>
+        <img src={logo} alt="Logo Tiflux" id='logo' />
+        <Header src={login}/>
+        <EmailInput src={mail}/>
+        <PasswordInput src={lock} src2={eye}/>
+        <Checkbox />
+        <Button />
+        <Register />
+      </div>
+    </div>
+  );
+}
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='main'>
+      <Image src={sideimage}/>
+      <LoginForm />
     </div>
   );
 }
