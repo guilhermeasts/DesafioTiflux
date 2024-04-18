@@ -4,8 +4,8 @@ function Checkbox() {
 
     const [checked, setChecked] = useState(false);
 
-    const handleCheckboxChange = () => {
-    setChecked(!checked);
+    const checkboxChange = () => {
+    setChecked(!checked);  // Mudar o input através do input ou da label para checked 
     };
 
     return (
@@ -13,7 +13,7 @@ function Checkbox() {
         <input type='checkbox'
         id='checkremember'
         checked={checked}
-        onChange={handleCheckboxChange} />
+        onChange={checkboxChange} />
         <label htmlFor='checkremember' className='roboto-regular'>Lembre-me</label>
         <p id='forget' className='poppins-semibold'>Esqueci minha senha</p>
       </div>

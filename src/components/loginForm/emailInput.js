@@ -1,6 +1,6 @@
 import React from 'react';
 
-function EmailInput({ src, value, onChange }) {
+function EmailInput({ src, value, onChange, onFocus, onBlur }) {
   return (
     <div className='email'>
       <p className='poppins-medium'>E-mail</p>
@@ -12,6 +12,8 @@ function EmailInput({ src, value, onChange }) {
           className='roboto-regular' 
           value={value} 
           onChange={onChange} 
+          onFocus={onFocus}
+          onBlur={onBlur}
         />
       </div>
     </div>
