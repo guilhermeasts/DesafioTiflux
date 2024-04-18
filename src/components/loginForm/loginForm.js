@@ -17,6 +17,8 @@ function LoginForm() {
   const [emailSelected, setEmailSelected] = useState(false); 
   const [passwordSelected, setPasswordSelected] = useState(false); 
 
+  const [error, setError] = useState(''); 
+
   const handleEmailFocus = () => {
     setEmailSelected(true); 
   }
@@ -35,6 +37,19 @@ function LoginForm() {
 
   const handleSubmit = (event) => { // Recebe o que esta  nos inputs 
     event.preventDefault();
+
+    if (email.trim() === '') {
+        setError('Você não preencheu o campo de e-mail.');
+        return; 
+    }
+
+    if (password.trim() === '') {
+        setError('Você não preencheu o campo de senha.');
+        return; 
+    }
+      
+      setError('');
+      
     console.log("Email:", email, "Password:", password); // Apenas para demonstrar que esta salvando os valores quando clica no botão. 
 
   }
@@ -59,6 +74,7 @@ function LoginForm() {
       />
         <Checkbox />
         <Button text="Entrar" onClick={handleSubmit} />
+        {error && <p className='roboto-regular' id='error'>{error}</p>}
     </form>
      
   );
