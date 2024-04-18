@@ -179,6 +179,7 @@ button{
 }
 
 .register p{
+  margin: 20px 5px;
   color: var(--primary-color);
 }
 
