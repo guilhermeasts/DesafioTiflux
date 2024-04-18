@@ -16,12 +16,6 @@ import Checkbox from './components/checkbox/checkbox';
 import Button from './components/button/button';
 import Register from './components/register/register';
 
-
-
-
-
-
-
 function LoginForm() {
   return (
     <div className='login'>
